@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form action="signup.php" method="post">
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" name="signup">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="index1.html">Login</a></p>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var loginForm = document.querySelector('.signup-container form');
+
+            loginForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent form submission
+
+                // Get the values of email and password input fields
+                var email = document.getElementById('email').value;
+                var password = document.getElementById('password').value;
+
+                // Perform any necessary validation here
+
+                // Redirect to home.html
+                window.location.href = 'home.html';
+            });
+        });
+    </script>
+</body>
+
+</html>
